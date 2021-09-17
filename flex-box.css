@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-padre {
+    background-color: #563549;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+
+section {
+    color: white;
+    background-color: #de8a91;
+    /* height: 20vh; */
+    width: 24vw;
+    margin: 6px;
+}
+
+p {
+    font-size: 100px;
+    text-align: center;
+    padding: 60px;
+}

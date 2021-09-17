@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(243, 217, 226);
+}
+
+.caja-padre{
+    display: flex;
+
+    /*ROW es el que toma por defecto*/
+    /*ROW-REVERSE los acomoda de izquierda a derecha*/
+    /*COLUMN acomoda los itemes (hijos) en columna*/
+    /*COLUMN-REVERSE en columna de abajo hacia arriba*/
+    /* flex-direction: row-reverse; */
+
+    /*NOWRAP es el que toma por defecto*/
+    /*WRAP coloca los itemes en la parte de abajo si son demasiados y no caben en la misma liena*/
+    /*WRAP-REVERSE los coloca en la parte de abajo pero al reves*/
+    /* flex-wrap: wrap; */
+
+    /*En este sola propiedad se unen las dos priemeras*/
+    /* flex-flow: row-reverse wrap; */
+    
+    /*CENTER alinea los elementos al centro del contenedor (funciona mejor en menos elementos)*/
+    /*FLEX-START se alinean de lado izquierdo*/
+    /*FLEX-END se alinean de lado derecho*/
+    /* SPACE-AROUND se distribuyen en todo el contenedor dejando un espacio en las orillas*/
+    /*SPACE-BETWEEN se distribuyen en todo el contenedor pero no deja espacios en las orillas*/
+    /* justify-content: space-between; */
+
+    /*Si el contenedor padre tiene una altura asignada los items (hijos) tomaran en automatico esa altura (siempre y cuando no la tengan asignada). Para evitar eso se utiliza la propiedad ALIGN-ITEMS*/
+    /* STRETCH es el que toma por defecto */
+    /* CENTER los posisiona en el centro del eje principal (eje X) */
+    /* FLEX.START los alinea de lado izquierdo/arriba */
+    /* FLEX-END aliena los items de  lado izquierdo/abajo */
+    /*BASELINE los aliena deacuerdo a la base de cada item (se ve el cambio cuando los hijos tienen una texto de tamaños diferentes)*/
+    /* align-items: baseline; */
+
+    /*ALING-CONTENT se utiliza para alinear las filas en el contenedor*/
+    /*SPACE-BETWEEN coloca las filas arriba/abajo dejando muy poco espacio en las orillas*/
+    /*SPACE-AROUND coloca las filas arriba/abajo dejando espacio en las orillas */
+    /* STRETCH los items intenta usar todo el alto que pueden */
+    /*CENTER alinea los itemes en el eje principal */
+    /*FLEX-START alinea en la parte de arriba */
+    /* FLEX-END alinea los items en la parte de abajo */
+    /* align-content: space-between; */
+    
+    height: 400px;
+    flex-wrap: wrap;
+
+    background-color: rgb(231, 176, 176);
+    padding: 10px;
+    border: 2px solid black;
+} 
+
+.caja{
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    border: 2px solid black;
+}
+
+
+/* PROPIEDADES QUE SE ASIGNAN A LOS ITEMS (HIJOS) */
+/*ORDER con esta propiedad se le puede asignar cualquier posicion a los items por ejemplo caja1/lugar3 caja2/lugar4, etc*/
+/*FLEX-GROW asigna la cantidad de espacio que le toca a cada item*/
+/*FLEX-SHRINK determina hasta cuanto se puede encoger uno item*/
+/* FLEX-BASIS de una medida minima al item y se va ajustando apartir de eso*/
+/*FLEX sintetiza las propiedades FLEX-GROW, FLEX-SHRINK Y FLEX BASIS*/
+
+.h-1 {
+    background-color: rgba(128, 0, 0, 0.404);
+    /*order: 3; */
+    /* flex-grow: 3; */
+}
+
+.h-2 {
+    background-color: rgba(211, 82, 121, 0.726);
+    /*order: 4; */
+    /* flex-grow: 6; */
+}
+
+.h-3 {
+    background-color: rgba(66, 0, 128, 0.404);
+    /*order: 1; */
+    /* flex-grow: 9; */
+}
+
+.h-4 {
+    background-color: rgba(82, 106, 211, 0.726);
+    /*order: 2; */
+    /* flex-grow: 12; */
+}
